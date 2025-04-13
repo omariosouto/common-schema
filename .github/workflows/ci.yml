@@ -18,11 +18,12 @@ jobs:
       # ====================
       - name: "Install Dependencies"
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ env.GH_REGISTRY_TOKEN }}" > ~/.npmrc
           npm config set @omariosouto:registry https://npm.pkg.github.com
+          echo "//npm.pkg.github.com/:_authToken=${{ env.GH_REGISTRY_TOKEN }}" > ~/.npmrc
           npm ci
         env:
           GH_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: "Test"
         run: | 
           echo "running..."
