@@ -26,6 +26,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@omariosouto/tsconfig": "1.13.9",
     "@types/node": "^22.14.1",
     "tsup": "^8.4.0",
     "typescript": "^5.0.0"
