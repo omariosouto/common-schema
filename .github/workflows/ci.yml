@@ -14,7 +14,6 @@ jobs:
       - name: "Set up Node and GitHub Packages"
         uses: actions/setup-node@v4
         with:
-          node-version: 16
           # always-auth ensures npm always sends credentials when installing packages
           always-auth: true
           # Configure the default registry for the given scope
