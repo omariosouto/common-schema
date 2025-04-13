@@ -4,10 +4,6 @@ on:
   pull_request:
     types: [opened, synchronize]
 
-permissions:
-  contents: read
-  packages: read
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,14 +13,6 @@ jobs:
       - uses: actions/setup-node@v4
       # ====================
       - name: "Install Dependencies"
-        run: |
-          npm config set @omariosouto:registry https://npm.pkg.github.com
-          echo "//npm.pkg.github.com/:_authToken=${{ env.GH_REGISTRY_TOKEN }}" > ~/.npmrc
-          npm ci
-        env:
-          GH_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+        run: "npm ci"
       - name: "Test"
-        run: | 
-          echo "running..."
-          npm run test
+        run: "npm run test"
