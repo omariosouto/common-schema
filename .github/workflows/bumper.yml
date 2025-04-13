@@ -59,6 +59,16 @@ jobs:
           # Provide the App token so that any further operations (like pushing commits) are attributed to the bot
           token: ${{ steps.create-app-token.outputs.token }}
 
+      # Set up Node and GitHub Packages authentication
+      - name: "Set up Node and GitHub Packages"
+        uses: actions/setup-node@v4
+        with:
+          # always-auth ensures npm always sends credentials when installing packages
+          always-auth: true
+          # Configure the default registry for the given scope
+          registry-url: "https://registry.npmjs.org"
+          scope: "@omariosouto"
+
       - name: Install dependencies
         run: npm ci
 
