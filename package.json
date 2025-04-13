@@ -1,34 +1,22 @@
 {
-  "name": "@omariosouto/common-schema",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "dist/index.js",
+  "private": true,
+  "name": "lib-monorepo",
+  "version": "0.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
   "scripts": {
-    "build": "tsup",
-    "test": "echo 'There are no tests. But things work trust me!'"
+    "bumper": "npm_config_registry=https://npm.pkg.github.com npx @omariosouto/bumper",
+    "example": "npm exec --workspace=example-nextjs",
+    "dev:example": "npm run example -- npm run dev",
+    "lib": "npm exec --workspace=@omariosouto/common-schema",
+    "build": "npm run lib -- npm run build",
+    "test": "npm run lib -- npm run test"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
-  "description": "",
-  "exports": {
-    ".": "./dist/index.js",
-    "./test": "./dist/test.js"
-  },
-  "files": [
-    "dist"
-  ],
-  "repository": "https://github.com/omariosouto/common-schema",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "dependencies": {
-    "zod": "^3.24.2"
-  },
-  "devDependencies": {
-    "@omariosouto/tsconfig": "1.13.9",
-    "@types/node": "^22.14.1",
-    "tsup": "^8.4.0",
-    "typescript": "^5.0.0"
-  }
+  "license": "ISC",
+  "description": ""
 }
