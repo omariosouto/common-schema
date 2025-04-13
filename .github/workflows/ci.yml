@@ -21,4 +21,5 @@ jobs:
           GH_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Test"
         run: | 
+          echo "running..."
           npm run test
