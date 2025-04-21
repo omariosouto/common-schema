@@ -1,0 +1,19 @@
+import { describe, expect, it } from "vitest";
+import { schemaGenerate } from "./index";
+import { s } from "../../schema";
+
+describe("Schema Generation", () => {
+  it("should generate a schema from a given object", () => {
+    const schema = s.object({
+      name: s.string(),
+      age: s.number(),
+    });
+
+    const generatedSchema = schemaGenerate(schema);
+
+    expect(Object.keys(generatedSchema)).to.have.keys([
+      "name",
+      "age",
+    ]);
+  });
+});
