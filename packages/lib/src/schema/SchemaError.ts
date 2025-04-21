@@ -10,7 +10,7 @@ export class SchemaError extends CommonError {
       statusCode: 400,
       details: {
         issues: error.issues,
-        zodError: error, // opcional, caso queira ter o objeto inteiro disponível
+        baseError: error,
       },
     });
 
