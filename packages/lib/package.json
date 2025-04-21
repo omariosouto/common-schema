@@ -1,6 +1,6 @@
 {
   "name": "@omariosouto/common-schema",
-  "version": "1.0.2",
+  "version": "1.0.3-beta20254211745194485PR2",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
