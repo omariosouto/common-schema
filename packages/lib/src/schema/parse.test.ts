@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { s } from "../schema";
 import { parseSchema } from "./parse";
+import { SchemaError } from "./SchemaError";
+import { ZodError } from "zod";
 
 describe("Schema Parsing", () => {
   it("should parse a valid schema", () => {
@@ -28,7 +30,8 @@ describe("Schema Parsing", () => {
       age: "thirty",
     };
 
-    // TODO: The error thrown must be of type SchemaError
     expect(() => parseSchema(schema, payload)).toThrow();
+    expect(() => parseSchema(schema, payload)).toThrow(SchemaError);
+    expect(() => parseSchema(schema, payload)).not.toThrow(ZodError);
   });
 });

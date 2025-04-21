@@ -11,7 +11,10 @@ describe("Schema Generation", () => {
       age: s.number(),
     })
 
-    const generatedSchema = schemaGenerate(schema);
+    const generatedSchema = schemaGenerate(schema, {
+      name: "john",
+    });
+
     expect(generatedSchema).to.have.keys([
       "name",
       "age",

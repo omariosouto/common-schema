@@ -24,13 +24,15 @@
     "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
-    "@omariosouto/common-core": "*"
+    "@omariosouto/common-core": "*",
+    "@omariosouto/common-errors": "*"
   },
   "dependencies": {
     "@anatine/zod-mock": "^3.14.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@omariosouto/common-errors": "1.0.1",
     "@omariosouto/common-core": "1.0.4",
     "@omariosouto/tsconfig": "2.0.1",
     "@types/lodash-es": "^4.17.12",

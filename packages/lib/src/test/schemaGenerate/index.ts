@@ -9,7 +9,7 @@ interface SchemaGenerateOptions {
 }
 export function schemaGenerate<Schema extends SchemaType>(
   schema: Schema,
-  overrides: Partial<any> = {},
+  overrides?: Partial<s.infer<Schema>>,
   options: SchemaGenerateOptions = {},
 ): s.infer<Schema> {
   const fakeData = generateMock(schema as ZodTypeAny, {
