@@ -5,7 +5,7 @@ export class SchemaError extends CommonError {
   constructor(error: ZodError) {
     super({
       name: "SchemaError",
-      message: "Schema validation failed",
+      message: error.message,
       code: "SCHEMA_VALIDATION_ERROR",
       statusCode: 400,
       details: {
