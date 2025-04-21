@@ -28,6 +28,7 @@ describe("Schema Parsing", () => {
       age: "thirty",
     };
 
+    // TODO: The error thrown must be of type SchemaError
     expect(() => parseSchema(schema, payload)).toThrow();
   });
 });
