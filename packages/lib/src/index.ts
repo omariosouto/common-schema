@@ -1,1 +1,1 @@
-export { z as s } from "zod";
+export { s } from "./schema";
