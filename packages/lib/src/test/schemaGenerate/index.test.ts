@@ -5,7 +5,7 @@ import { bigDecimalSchema } from "../../big-decimal";
 import { BigDecimal } from "@omariosouto/common-core";
 
 describe("Schema Generation", () => {
-  it("should generate a schema from a given object", () => {
+  it.each([1, 2, 3, 4, 5])("should generate a schema from a given object", () => {
     const schema = s.object({
       name: s.string(),
       age: s.number(),
@@ -18,7 +18,7 @@ describe("Schema Generation", () => {
     ]);
   });
 
-  it("should generate a schema from a given object with custom schemas", () => {
+  it.each([1, 2, 3, 4, 5])("should generate a schema from a given object with custom schemas", () => {
     const schema = s.object({
       price: bigDecimalSchema,
     });
