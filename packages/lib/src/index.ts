@@ -1,1 +1,1 @@
-export { s } from "./schema";
+export * from "./schema/index";
