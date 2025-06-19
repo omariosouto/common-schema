@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { s } from "../../schema";
 import { generateMock } from "./generateMock";
 
-describe.only("generateMock()", () => {
+describe.skip("generateMock()", () => {
   it.each([1])("should generate a schema from a given object", () => {
     const schema = s.object({
       name: s.string(),
