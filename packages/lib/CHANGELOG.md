@@ -1,6 +1,6 @@
-# 2.0.0 - 2025-6-19
+# 1.1.0 - 2025-6-19
 
-The idea here is to make all preparations needed to support Zod V4 with it's support to loose and strict objects
+undefined
 
 
 # 1.0.5 - 2025-4-21

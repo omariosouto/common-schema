@@ -4,7 +4,7 @@ import { s } from "../../schema";
 import { bigDecimalSchema } from "../../big-decimal";
 import { BigDecimal } from "@omariosouto/common-core";
 
-describe.skip("Schema Generation", () => {
+describe("Schema Generation", () => {
   it.each([1, 2, 3, 4, 5])("should generate a schema from a given object", () => {
     const schema = s.object({
       name: s.string(),
@@ -15,15 +15,13 @@ describe.skip("Schema Generation", () => {
       name: "john",
     });
 
-    console.log("generatedSchema", generatedSchema);
-
     expect(generatedSchema).to.have.keys([
-      "age",
       "name",
+      "age",
     ]);
   });
 
-  it.skip.each([1, 2, 3, 4, 5])("should generate a schema from a given object with custom schemas", () => {
+  it.each([1, 2, 3, 4, 5])("should generate a schema from a given object with custom schemas", () => {
     const schema = s.object({
       price: bigDecimalSchema,
     });
