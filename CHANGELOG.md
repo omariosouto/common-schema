@@ -1,3 +1,8 @@
+# 1.1.0 - 2025-6-19
+
+undefined
+
+
 # 1.0.5 - 2025-4-21
 
 This pull request updates the `SchemaError` class in `SchemaError.ts` to improve error messaging by using the actual `ZodError` message instead of a static message.
