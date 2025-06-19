@@ -1,5 +1,3 @@
-import * as z from "zod";
-export { z as s };
-
+export { z as s } from "zod";
 export * from "./types";
 export * from "./parse";
