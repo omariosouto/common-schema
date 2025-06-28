@@ -24,8 +24,8 @@
     "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
-    "@omariosouto/common-core": "*",
-    "@omariosouto/common-errors": "*"
+    "@omariosouto/common-core": "^1.0.0 || ^2.0.0",
+    "@omariosouto/common-errors": "^1.0.0 || ^2.0.0"
   },
   "dependencies": {
     "@anatine/zod-mock": "^3.14.0",
