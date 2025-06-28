@@ -1,3 +1,8 @@
+# 1.1.1 - 2025-6-28
+
+Adjusting the peer dependencies
+
+
 # 1.1.0 - 2025-6-19
 
 undefined
